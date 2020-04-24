@@ -35,7 +35,7 @@ const pets= [{
     Name: "Augus",
     Color: "Yellow",
     'Special Skill': "Meowing",
-    'Type of Pet': "Fish",
+    'Type of Pet': "Cat",
     Friends: ["Hoina", "Rocy"]
 },
 {
@@ -58,12 +58,12 @@ const printToDom = (selector, domString)=>{
 const PetLoop = (petObj)=>{
     let petString = "";
     for (let i = 0; i < petObj.length; i++) {
-        petString += `<div class="${petObj[i]["Type of Pet"]}">`;
-        petString += `<h3>${petObj[i].Name}</h3>`;
+        petString += `<div class="${petObj[i]["Type of Pet"]} card">`;
+        petString += `<header>${petObj[i].Name}</header>`;
         petString += `<img src="${petObj[i].Image}">`;
-        petString += `<h3>${petObj[i]["Special Skill"]}</h3>`;
+        petString += `<h2>${petObj[i]["Special Skill"]}</h2>`;
         petString += `<h3>My Friends: ${petObj[i].Friends[0]} and ${petObj[i].Friends[1]}</h3>`;
-        petString += `<h3>${petObj[i]["Type of Pet"]}</h3>`;
+        petString += `<footer>${petObj[i]["Type of Pet"]}</footer>`;
         petString += `</div>`
     }
 
@@ -76,9 +76,59 @@ const PetLoop = (petObj)=>{
 
 const init = ()=>{
     PetLoop(pets);
+    buttonEventHandler();
+    
 }
 
-init();
+window.onload = function() {
+    init();
+    
+   
+  };
+
+
+
+const buttonEventHandler = () =>{
+    // const all= document.querySelector(".allButton");
+    // const dog= document.querySelector(".dogButton");
+    // const cat= document.querySelector(".catButton");
+    // const fish= document.querySelector(".fishButton");
+
+    // all.addEventListener("click", ()=>{
+    //     let allCards=document.querySelectorAll('.card');
+    //     let allDogs=document.querySelectorAll('.Dog');
+    //     let allCats=document.querySelectorAll('.Cat');
+    //     let allFishs=document.querySelectorAll('.Fish');
+    //     for (let i = 0; i < allCards.length; i++) {
+    //         allCards[i].classList.add("hideAndShow");            
+    //     }
+        
+    // });
+    // dog.addEventListener("click", ()=>{
+    //     let allCards=document.querySelectorAll('.Dog');
+    //     for (let i = 0; i < allCards.length; i++) {
+    //         allCards[i].classList.toggle("hideAndShow");            
+    //     }
+        
+    // });
+    // cat.addEventListener("click", ()=>{
+    //     let allCards=document.querySelectorAll('.Cat');
+    //     for (let i = 0; i < allCards.length; i++) {
+    //         allCards[i].classList.toggle("hideAndShow");            
+    //     }
+        
+    // });
+    // fish.addEventListener("click", ()=>{
+    //     let allCards=document.querySelectorAll('.Fish');
+    //     for (let i = 0; i < allCards.length; i++) {
+    //         allCards[i].classList.toggle("hideAndShow");            
+    //     }
+        
+    // });
+
+}
+
+
 
 
 

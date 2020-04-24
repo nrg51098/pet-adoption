@@ -1,3 +1,79 @@
 bdoy{
     background-color: antiquewhite;
 }
+#pets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card{
+    width: 300px;    
+    border: 2px solid gray;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+img{
+    margin-left: auto ;
+    margin-right: auto;
+    width: 90%;
+    height: 10vw;
+    margin-top: 10px;
+
+
+  
+ 
+}
+header{
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: khaki;
+    border-bottom: 2px solid lightslategrey;
+    
+}
+
+footer{
+   border-top: 2px solid gray;
+    background-color: lightcoral;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: rgb(59, 50, 187);
+}
+h1 {
+    text-align: center;
+    background-color: lightgreen;
+    
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    
+}
+
+button{
+    background-color: greenyellow;
+    box-shadow: 2px 2px red;
+    font-size: 20px;;
+}
+.hideAndShow{
+    display: block;
+}
+.Dog{
+    display:block;
+
+}
+.Cat{
+    display: block;
+
+}
+.Fish{
+    display:block;
+    
+}
