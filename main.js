@@ -89,46 +89,43 @@ window.onload = function() {
 
 
 const buttonEventHandler = () =>{
-    // const all= document.querySelector(".allButton");
-    // const dog= document.querySelector(".dogButton");
-    // const cat= document.querySelector(".catButton");
-    // const fish= document.querySelector(".fishButton");
+    const buttons = document.querySelectorAll("li button");
+    //console.log(buttons);
 
-    // all.addEventListener("click", ()=>{
-    //     let allCards=document.querySelectorAll('.card');
-    //     let allDogs=document.querySelectorAll('.Dog');
-    //     let allCats=document.querySelectorAll('.Cat');
-    //     let allFishs=document.querySelectorAll('.Fish');
-    //     for (let i = 0; i < allCards.length; i++) {
-    //         allCards[i].classList.add("hideAndShow");            
-    //     }
+    for (let i = 0; i < buttons.length; i++) {
+        console.log(buttons[i].className);
+        buttons[i].addEventListener("click", buttonClickEvent);
         
-    // });
-    // dog.addEventListener("click", ()=>{
-    //     let allCards=document.querySelectorAll('.Dog');
-    //     for (let i = 0; i < allCards.length; i++) {
-    //         allCards[i].classList.toggle("hideAndShow");            
-    //     }
-        
-    // });
-    // cat.addEventListener("click", ()=>{
-    //     let allCards=document.querySelectorAll('.Cat');
-    //     for (let i = 0; i < allCards.length; i++) {
-    //         allCards[i].classList.toggle("hideAndShow");            
-    //     }
-        
-    // });
-    // fish.addEventListener("click", ()=>{
-    //     let allCards=document.querySelectorAll('.Fish');
-    //     for (let i = 0; i < allCards.length; i++) {
-    //         allCards[i].classList.toggle("hideAndShow");            
-    //     }
-        
-    // });
-
+           
+    }
 }
 
+const buttonClickEvent = (event) => {
+    const petButton = event.target.className; 
+    if (petButton === "allButton"){
+        show('card');
+    } else if (petButton === "dogButton"){
+        show('Dog');
+    } else if (petButton === "catButton"){
+        show('Cat');
+    } else if (petButton === "fishButton"){
+        show('Fish');
+    }    
+}
 
+const show = (pet)=>{
+    const allCards = document.querySelectorAll('.card');
+    for (let i = 0; i < allCards.length; i++) {
+        allCards[i].classList.add("hide"); 
+        allCards[i].classList.remove("show"); 
+        console.log(allCards[i]) ;      
+    }
+  const petCards = document.querySelectorAll(`.${pet}`);
+  for (let i = 0; i < petCards.length; i++) {
+      petCards[i].classList.replace('hide', 'show');      
+  }
+
+}
 
 
 
