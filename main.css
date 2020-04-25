@@ -62,18 +62,24 @@ button{
     box-shadow: 2px 2px red;
     font-size: 20px;;
 }
-.hideAndShow{
+.hide{
+    display: none;
+}
+.show{
     display: block;
 }
-.Dog{
-    display:block;
 
-}
-.Cat{
-    display: block;
 
+.allButton{
+    background-color: khaki;
 }
-.Fish{
-    display:block;
-    
+
+.dogButton{
+    background-color: lavender;
+}
+.catButton{
+    background-color: lightcoral;
+}
+.fishButton{
+    background-color: lightpink;
 }
